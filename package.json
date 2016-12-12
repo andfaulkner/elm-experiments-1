@@ -1,0 +1,21 @@
+{
+  "name": "electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "elm": "elm make app/main.elm --output build/elm.js || true",
+    "elm:watch": "chokidar 'app/**/*.elm' -c 'npm run elm'",
+    "elm:watch:fullrestart": "node script/elm-watcher.js",
+    "start": "electron app/main.js",
+    "watch": "npm run start & npm run elm:watch & wait"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^1.6.1",
+    "colors": "^1.1.2",
+    "lodash": "^4.17.2"
+  }
+}
