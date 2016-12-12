@@ -23,3 +23,8 @@ doc/local_notes
 *.sublime-project
 .awcache
 .vscode
+
+# elm-package generated files
+elm-stuff/
+# elm-repl generated files
+repl-temp-*
